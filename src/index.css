@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+body {
+  background : #1b1c1d;
+}
+
+.access-code input{
+  text-transform: uppercase;
+}
+
+.inverted {
+  color: white
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+h1 {
+  color: #32325d;
+  font-weight: 400;
+  line-height: 50px;
+  font-size: 40px;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.Checkout {
+  margin: 0 auto;
+  max-width: 800px;
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+
+label {
+  color: #6b7c93;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+}
+
+
+input::placeholder {
+  color: #000;
+}
+
+input,
+.StripeElement {
+  display: block;
+  margin: 0px 0 20px 0;
+  max-width: 500px;
+  padding: 10px 14px;
+  font-size: 1em;
+  font-family: 'Source Code Pro', monospace;
+  border: 1px solid rgba(34,36,38,.15);
+  outline: 0;
+  border-radius: 4px;
+  background: white;
+}
+
+
+input:focus,
+.StripeElement--focus {
+  border-color: #85b7d9
+}
+
+.StripeElement.IdealBankElement,
+.StripeElement.PaymentRequestButton {
+  padding: 0;
+}
+
+.ui.form .field {
+  margin: 0
+}
+
+.validationMessage {
+  padding:0px 0px 0px 10px;
+  font-size: 10px;
+  text-align:left;
+  color: #9f3a38;
+  height:20px;
+}
+
+.ui.active.dimmer {
+  position: fixed;
+}
