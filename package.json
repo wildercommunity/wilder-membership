@@ -18,6 +18,7 @@
   "scripts": {
     "start": "react-app-env start",
     "build": "react-app-env build",
+    "build:staging" : "react-app-env --env-file=./development.env build",
     "test": "react-app-env test",
     "eject": "react-scripts eject",
     "lint": "eslint src/ ",
