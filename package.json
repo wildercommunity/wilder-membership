@@ -16,9 +16,9 @@
     "semantic-ui-react": "^0.82.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-env start",
+    "build": "react-app-env build",
+    "test": "react-app-env test",
     "eject": "react-scripts eject",
     "lint": "eslint src/ ",
     "lint:staged": "lint-staged"
@@ -34,5 +34,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "react-app-env": "^1.2.2"
+  }
 }

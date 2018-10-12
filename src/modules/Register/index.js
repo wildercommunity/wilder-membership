@@ -161,6 +161,8 @@ class Register extends Component {
         firstnameError, lastnameError, emailError, phoneError, passwordError, loadingText,
       } = this.state;
 
+      const stripeKey = process.env.REACT_APP_STRIPE_API_KEY;
+
       return (
         <div>
           <Transition visible={this.state.loading} animation="fade" duration={animationDuration}>
@@ -253,7 +255,7 @@ class Register extends Component {
                         error={this.state.passwordError}
                       />
                       <div className="validationMessage">{this.state.passwordErrorMessage}</div>
-                      <StripeProvider apiKey="pk_test_UPEueEEYg8MWSoDJB8woTAIU">
+                      <StripeProvider apiKey={stripeKey}>
                         <Elements>
                           <Submit
                             onChange={element => this.stripeElementChange(element)}
