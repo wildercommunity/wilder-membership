@@ -1,4 +1,3 @@
-# Branch Deploy context: All deploys that are not in
-# an active Deploy Preview will inherit these settings.
+# Branch Deploy context: All deploys that are not in deploy preview
 [context.branch-deploy]
   command = "yarn build:staging"
