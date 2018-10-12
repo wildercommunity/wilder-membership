@@ -36,9 +36,9 @@ class App extends Component {
   showThanks() {
     const { animationDuration } = this.state;
     const self = this;
-    console.log('showTanks');
     this.setState({ registerVisible: false });
     setTimeout(() => {
+      window.scrollTo(0, 0);
       self.setState({
         thanksVisible: true,
       });

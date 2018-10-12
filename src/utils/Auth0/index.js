@@ -11,6 +11,9 @@ export function registerUser(params) {
     email: params.email,
     password: params.password,
     connection: 'Username-Password-Authentication',
-    user_metadata: { firstName: params.firstname, lastName: params.lastname, role: 'MEMBER' },
+    user_metadata: { firstName: params.firstname,
+      lastName: params.lastname,
+      role: 'MEMBER',
+      stripeCustomerId: params.stripeCustomerId},
   });
 }

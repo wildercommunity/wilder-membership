@@ -146,9 +146,11 @@ class Register extends Component {
       }
     }
 
-    registerUser() {
+    registerUser(stripeCustomerId) {
       this.setState({ loadingText: 'Creating your Wilder Garten Profile' });
-      return auth0RegisterUser(this.state);
+      let params = this.state;
+      params.stripeCustomerId = stripeCustomerId
+      return auth0RegisterUser(params);
     }
 
 
@@ -191,7 +193,7 @@ class Register extends Component {
                             icon="user"
                             name="firstname"
                             value={firstname}
-                            onChange={this.handleInputChange}
+                            onChange={(event) => { this.handleInputChange(event); this.validateFirstname(); }}
                             iconPosition="left"
                             placeholder="First Name"
                             onBlur={this.validateFirstname}
@@ -206,7 +208,7 @@ class Register extends Component {
                             icon="user"
                             name="lastname"
                             value={lastname}
-                            onChange={this.handleInputChange}
+                            onChange={(event) => { this.handleInputChange(event); this.validateLastname(); }}
                             iconPosition="left"
                             placeholder="Last Name"
                             onBlur={this.validateLastname}
@@ -223,7 +225,7 @@ class Register extends Component {
                         icon="envelope"
                         value={email}
                         iconPosition="left"
-                        onChange={this.handleInputChange}
+                        onChange={(event) => { this.handleInputChange(event); this.validateEmail(); }}
                         onBlur={this.validateEmail}
                         error={this.state.emailError}
                         placeholder="E-mail address"
@@ -235,7 +237,7 @@ class Register extends Component {
                         fluid
                         icon="phone"
                         value={phone}
-                        onChange={this.handleInputChange}
+                        onChange={(event) => { this.handleInputChange(event); this.validatePhone(); }}
                         iconPosition="left"
                         onBlur={this.validatePhone}
                         error={this.state.phoneError}
