@@ -4,14 +4,16 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "eslint-config-airbnb": "^17.1.0",
     "formsy-semantic-ui-react": "^0.3.3",
+    "lint-staged": "4.2.3",
+    "pre-commit": "^1.2.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4",
     "react-stripe-elements": "^2.0.1",
     "semantic-ui": "^2.4.0",
-    "semantic-ui-react": "^0.82.5",
-    "lint-staged": "4.2.3"
+    "semantic-ui-react": "^0.82.5"
   },
   "scripts": {
     "start": "react-scripts start",

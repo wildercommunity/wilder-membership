@@ -2,9 +2,8 @@ const axios = require('axios');
 
 
 export function registerUser(params) {
-
-  const api =  axios.create({
-    baseURL: `https://wildercommunity.eu.auth0.com`,
+  const api = axios.create({
+    baseURL: 'https://wildercommunity.eu.auth0.com',
   });
 
   return api.post('/dbconnections/signup', {
@@ -12,7 +11,6 @@ export function registerUser(params) {
     email: params.email,
     password: params.password,
     connection: 'Username-Password-Authentication',
-    user_metadata: {firstName: params.firstname, lastName: params.lastname, role: 'MEMBER'}
-  })
-
+    user_metadata: { firstName: params.firstname, lastName: params.lastname, role: 'MEMBER' },
+  });
 }
