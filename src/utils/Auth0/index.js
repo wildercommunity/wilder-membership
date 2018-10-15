@@ -10,7 +10,7 @@ export function registerUser(params) {
     client_id: 'CTshhEjYm6IzQHHX1VYsUFS8ZyNc8aZQ',
     email: params.email,
     password: params.password,
-    connection: 'Username-Password-Authentication',
+    connection: process.env.REACT_APP_AUTH0_CONNECTION,
     user_metadata: { firstName: params.firstname,
       lastName: params.lastname,
       role: 'MEMBER',
